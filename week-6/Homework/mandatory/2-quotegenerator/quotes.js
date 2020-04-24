@@ -17,6 +17,7 @@
 // pickFromArray(coloursArray)  //maybe returns "#F38630"
 //
 // You DO NOT need to understand how this function works.
+
 function pickFromArray(choices) {
   return choices[Math.floor(Math.random() * choices.length)];
 }
@@ -490,3 +491,7 @@ const quotes = [
     author: "Zig Ziglar",
   },
 ];
+console.log("hello");
+let myQuote = pickFromArray(quotes);
+document.getElementById("author").innerHTML = myQuote.author;
+document.getElementById("quote").innerHTML = myQuote.quote;
