@@ -1,4 +1,24 @@
-function setAlarm() {}
+function setAlarm() {
+  const numberOfSecond = parseInt(document.getElementById("alarmSet").value);
+  if (isNaN(numberOfSecond)) {
+    alert("please enter number");
+  } else {
+    let timeLeft = numberOfSecond;
+    updateTime(timeLeft);
+    const timer = setInterval(function () {
+      timeLeft = timeLeft - 1;
+      if (timeLeft === 0) {
+        playAlarm();
+        clearInterval(timer);
+      }
+      updateTime(timeLeft);
+    }, 1000);
+  }
+}
+function updateTime(timeLeft) {
+  const timeBox = document.getElementById("timeRemaining");
+  timeBox.textContent = `Time Remaining: 00:${timeLeft}`;
+}
 
 // DO NOT EDIT BELOW HERE
 
