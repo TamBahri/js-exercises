@@ -1,1 +1,14 @@
 /** Write your CSS in here **/
+body {
+  background-color: blueviolet;
+}
+#quoteBox {
+  background-color: burlywood;
+  border: 10px solid brown;
+}
+#quote {
+  background-color: blanchedalmond;
+}
+#author {
+  font-size: small;
+}
