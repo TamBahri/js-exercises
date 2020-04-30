@@ -1,17 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Slideshow</title>
-    <script src="slideshow.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slideshow Car Collection</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <!-- Write your HTML in here -->
+    <div class="container">
+      <div class="slideshow">
+        <img src="images/myClassicCollection.jpg" alt="myClassicCollection" />
+        <div class="text">My classic car collection</div>
+      </div>
+      <div class="slideshow">
+        <img src="images/1952-rolls-royce.jpg" alt="1952-rolls-royce" />
+        <div class="text">'1952-rolls-royce</div>
+      </div>
+      <div class="slideshow">
+        <img src="images/1954-aston-martin.jpg" alt="1954-aston-martin" />
+        <div class="text">'1954-aston-martin</div>
+      </div>
+      <div class="slideshow">
+        <img src="images/1954-mercedes-300sl.jpg" alt="1954-mercedes-300sl" />
+        <div class="text">'1954-mercedes-300sl</div>
+      </div>
+      <div class="slideshow">
+        <img src="images/1967-camaro.jpg" alt="1967-camaro" />
+        <div class="text">'1967-camaro</div>
+      </div>
+      <div class="slideshow">
+        <img src="images/1967-volvo.jpg" alt="1967-volvo" />
+        <div class="text">'1967-volvo</div>
+      </div>
+      <div class="slideshow">
+        <img src="images/1968-chevrolet.jpg" alt="1968-chevrolet" />
+        <div class="text">1968-chevrolet</div>
+      </div>
+      <div class="slideshow">
+        <img src="images/1968-jaguar-e.jpg" alt="1968-jaguar-e" />
+        <div class="text">1968-jaguar-e</div>
+      </div>
+      <div class="slideshow">
+        <img
+          src="images/1971-lamborghini-miura.jpg"
+          alt="1971-lamborghini-miura"
+        />
+        <div class="text">1971-lamborghini-miura</div>
+      </div>
+
+      <div id="allBtns">
+        <button class="btn" type="button" id="autoBackward">
+          Auto Backward
+        </button>
+        <button class="btn" type="button" id="Backward" onclick="plusSlide(-1)">
+          Backward
+        </button>
+        <button class="btn active" type="button" id="Stop">Stop</button>
+        <button class="btn" type="button" id="Pause">Pause</button>
+        <button class="btn" type="button" id="Forward" onclick="plusSlide(1)">
+          Forward
+        </button>
+        <button class="btn" type="button" id="autoForward">Auto Forward</button>
+      </div>
+      <div id="div-input">
+        <label for="input">Change the speed for auto play: </label>
+        <input type="number" id="input" placeholder="seconds" />
+        <button type="submit" id="inputBtn">Enter</button>
+      </div>
+    </div>
+
+    <script src="slideshow.js"></script>
   </body>
 </html>
